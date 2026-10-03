@@ -1,0 +1,22 @@
+{
+  "name": "social-news-agents-server",
+  "version": "1.0.0",
+  "description": "Production AI Newsroom & Multi-Platform Social Media Automation Backend",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.11.5",
+    "rss-parser": "^3.13.0",
+    "uuid": "^11.0.3"
+  }
+}

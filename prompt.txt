@@ -1,0 +1,1514 @@
+# MASTER PROMPT
+
+## Build an AI-Powered Newsroom + Multi-Platform Social Media Automation Platform
+
+Build a production-ready, scalable **AI Newsroom and Social Media Automation Platform** for a digital news/media organization.
+
+The platform should allow an admin/editor to enter a news topic, URL, press release, uploaded document, RSS source, or manually written information. The AI agent team should research, verify, write, format, generate media, create platform-specific content, send it for approval, and publish/schedule it across:
+
+* Website
+* WhatsApp Business
+* Facebook
+* Instagram
+* YouTube
+* Optional: Telegram
+* Optional: X/Twitter
+
+The system must support both **human-controlled publishing** and **fully automated workflows**.
+
+---
+
+# 1. CORE OBJECTIVE
+
+Create a centralized AI-powered newsroom where:
+
+INPUT
+→ Research
+→ Source collection
+→ Fact checking
+→ News writing
+→ Headline generation
+→ SEO optimization
+→ Image generation
+→ Social media content generation
+→ Video/Short generation
+→ Editor approval
+→ Scheduling
+→ Multi-platform publishing
+→ Analytics
+→ Performance optimization
+
+Everything should be managed from one admin dashboard.
+
+IMPORTANT:
+
+AI must NOT automatically present unverified claims as facts.
+
+Every generated news story should maintain source references and a clear distinction between:
+
+* Verified facts
+* Attributed statements
+* Analysis
+* Unverified information
+* AI-generated material
+
+Provide an editor approval workflow before public publishing by default.
+
+---
+
+# 2. AI AGENT TEAM
+
+Create a multi-agent architecture.
+
+## AGENT 1 — NEWS RESEARCH AGENT
+
+Responsibilities:
+
+* Search the web for relevant information.
+* Collect information from multiple sources.
+* Read RSS feeds.
+* Process submitted URLs.
+* Process uploaded PDFs/documents.
+* Identify breaking/trending topics.
+* Extract important facts.
+* Identify dates, people, locations and organizations.
+* Store source URLs.
+* Detect duplicate stories.
+* Create a research brief.
+
+Output:
+
+```json
+{
+  "topic": "",
+  "summary": "",
+  "key_facts": [],
+  "sources": [],
+  "entities": [],
+  "timeline": [],
+  "confidence": "",
+  "requires_human_verification": true
+}
+```
+
+---
+
+# 3. AGENT 2 — FACT CHECKING AGENT
+
+Responsibilities:
+
+* Compare claims against available sources.
+* Detect contradictions.
+* Identify unsupported claims.
+* Flag missing information.
+* Detect potentially misleading headlines.
+* Identify opinion vs fact.
+* Mark information requiring human verification.
+
+Never invent:
+
+* Quotes
+* Statistics
+* Names
+* Dates
+* Locations
+* Government announcements
+* Court decisions
+* Election results
+* Casualty figures
+* Official statements
+
+If information cannot be verified, mark it clearly.
+
+Output a verification report.
+
+---
+
+# 4. AGENT 3 — NEWS WRITER AGENT
+
+Generate:
+
+### Website Article
+
+* SEO title
+* Breaking-news headline
+* Short headline
+* URL slug
+* Meta title
+* Meta description
+* Introduction
+* Full article
+* Key points
+* Timeline if applicable
+* FAQs
+* Source references
+* Image caption
+* Image alt text
+
+Writing styles:
+
+* Breaking News
+* General News
+* Local News
+* National News
+* International News
+* Business
+* Technology
+* Sports
+* Entertainment
+* Politics
+* Education
+* Crime
+* Weather
+* Lifestyle
+
+Support Hindi and English.
+
+Design the architecture so additional Indian languages can be added later.
+
+---
+
+# 5. AGENT 4 — HEADLINE & SEO AGENT
+
+Generate multiple headline variations:
+
+* Breaking headline
+* SEO headline
+* Mobile headline
+* Social headline
+* YouTube title
+* Short-form headline
+* WhatsApp headline
+
+Generate:
+
+* Keywords
+* Tags
+* Categories
+* Meta description
+* Slug
+* Schema information
+* Open Graph title
+* Open Graph description
+
+Avoid clickbait that changes the meaning of the story.
+
+---
+
+# 6. AGENT 5 — SOCIAL MEDIA CONTENT AGENT
+
+Create separate content for every platform.
+
+## FACEBOOK
+
+Generate:
+
+* Post text
+* Headline
+* Short summary
+* Hashtags
+* CTA
+* Link preview information
+
+## INSTAGRAM
+
+Generate:
+
+* Caption
+* Short caption
+* Hashtags
+* Carousel text
+* Reel caption
+
+## WHATSAPP
+
+Generate:
+
+* Breaking-news message
+* Short news message
+* Detailed message
+* CTA
+* Website link
+
+Do not spam users or unauthorized groups.
+
+Use official WhatsApp Business APIs and approved templates where required.
+
+## YOUTUBE
+
+Generate:
+
+* Video title
+* Description
+* Tags
+* Hashtags
+* Thumbnail text
+* Short script
+* Long-form script
+* YouTube Shorts script
+
+---
+
+# 7. AGENT 6 — VISUAL DESIGN AGENT
+
+Automatically generate visual requirements.
+
+For every news story create:
+
+1. Website featured image
+2. Facebook image
+3. Instagram post
+4. Instagram portrait
+5. Instagram carousel
+6. YouTube thumbnail
+7. YouTube Shorts visual
+8. WhatsApp share image
+
+Support:
+
+* AI image generation
+* Uploaded images
+* News photographs
+* Logo placement
+* Brand colors
+* Typography
+* Watermark
+* Breaking-news templates
+* Lower thirds
+
+IMPORTANT:
+
+Do not generate a realistic image that could be mistaken for an actual news photograph when the image is illustrative or AI-generated.
+
+Clearly label AI-generated/illustrative visuals where appropriate.
+
+---
+
+# 8. AGENT 7 — VIDEO PRODUCER AGENT
+
+Automatically create:
+
+## NEWS SHORT
+
+Structure:
+
+0–3 sec:
+Breaking headline
+
+3–10 sec:
+Main fact
+
+10–25 sec:
+Important details
+
+25–40 sec:
+Additional context
+
+40–50 sec:
+Source/context
+
+50–60 sec:
+CTA
+
+Generate:
+
+* Script
+* Voiceover
+* Subtitles
+* Scene list
+* Images
+* B-roll suggestions
+* Background music
+* Logo animation
+* Intro
+* Outro
+
+Support:
+
+* YouTube Shorts
+* Instagram Reels
+* Facebook Reels
+
+Generate vertical 9:16 videos.
+
+Also support 16:9 YouTube videos.
+
+---
+
+# 9. AGENT 8 — PUBLISHING AGENT
+
+Central publishing engine.
+
+Supported platforms:
+
+* Website
+* Facebook
+* Instagram
+* WhatsApp Business
+* YouTube
+* Telegram
+* X/Twitter
+
+Capabilities:
+
+* Publish immediately
+* Schedule
+* Queue
+* Retry failed publishing
+* Cancel scheduled post
+* Update post
+* Track publishing status
+
+Every post should have:
+
+```text
+Draft
+↓
+AI Generated
+↓
+Editor Review
+↓
+Approved
+↓
+Scheduled
+↓
+Published
+↓
+Analytics
+```
+
+---
+
+# 10. EDITORIAL APPROVAL SYSTEM
+
+Create a professional newsroom approval interface.
+
+Editor should see:
+
+LEFT:
+
+Original source/research
+
+CENTER:
+
+AI-generated article
+
+RIGHT:
+
+AI verification report
+
+Actions:
+
+* Approve
+* Edit
+* Reject
+* Request AI Rewrite
+* Request Fact Check
+* Regenerate Headline
+* Regenerate Image
+* Schedule
+* Publish
+
+Show warnings prominently.
+
+Example:
+
+⚠ FACT CHECK REQUIRED
+
+⚠ SOURCE CONFLICT DETECTED
+
+⚠ QUOTE NOT VERIFIED
+
+⚠ IMAGE IS AI GENERATED
+
+---
+
+# 11. BREAKING NEWS MODE
+
+Create a dedicated Breaking News workflow.
+
+Admin enters:
+
+```text
+Breaking News Topic
+```
+
+System automatically:
+
+1. Searches sources
+2. Creates research brief
+3. Checks information
+4. Generates 1-line breaking alert
+5. Generates website article
+6. Generates social posts
+7. Generates WhatsApp alert
+8. Generates thumbnail
+9. Creates short video
+10. Sends everything to editor approval
+11. Publishes approved content
+
+Provide an emergency "Publish Breaking News" button, but require explicit confirmation before publishing.
+
+---
+
+# 12. TRENDING NEWS ENGINE
+
+Create a Trending Dashboard.
+
+Monitor:
+
+* Google Trends or equivalent permitted trend sources
+* RSS feeds
+* News sources
+* Social signals
+* Website search activity
+* Internal article performance
+
+Show:
+
+```text
+TRENDING TOPICS
+
+Topic
+Trend Score
+Category
+Source Count
+Potential Audience
+Status
+```
+
+Do not fabricate trend scores. Clearly identify whether a score is sourced or internally calculated.
+
+---
+
+# 13. RSS NEWS INGESTION
+
+Allow admins to add RSS sources.
+
+Database:
+
+```text
+rss_sources
+```
+
+Fields:
+
+* id
+* name
+* url
+* category
+* language
+* active
+* last_checked
+* created_at
+
+System periodically fetches RSS feeds.
+
+Pipeline:
+
+RSS
+→ Duplicate Detection
+→ Topic Classification
+→ Research
+→ Fact Check
+→ AI Draft
+→ Editor Review
+
+Do NOT automatically republish copyrighted articles verbatim.
+
+Generate original reporting/summary based on permitted source material and provide attribution/source links.
+
+---
+
+# 14. NEWSROOM DASHBOARD
+
+Create a premium dashboard.
+
+Cards:
+
+* Today's Articles
+* Drafts
+* Pending Approval
+* Published
+* Scheduled
+* Breaking News
+* Trending Topics
+* Social Posts
+* Videos
+* Failed Posts
+
+Charts:
+
+* Website traffic
+* Facebook engagement
+* Instagram engagement
+* YouTube views
+* WhatsApp delivery metrics
+* Top stories
+* Top categories
+
+---
+
+# 15. CONTENT CALENDAR
+
+Create visual calendar.
+
+Views:
+
+* Day
+* Week
+* Month
+
+Each scheduled content item should show:
+
+Platform icon
+Headline
+Content type
+Status
+Scheduled time
+
+Allow drag-and-drop rescheduling.
+
+---
+
+# 16. SOCIAL MEDIA ACCOUNT MANAGEMENT
+
+Admin can connect:
+
+### Meta
+
+* Facebook Pages
+* Instagram Professional accounts
+
+### WhatsApp
+
+* WhatsApp Business Platform
+
+### YouTube
+
+* YouTube channel
+
+### Optional
+
+* Telegram
+* X/Twitter
+
+Store OAuth tokens securely.
+
+Never expose access tokens in frontend code.
+
+Use encrypted server-side credential storage.
+
+---
+
+# 17. PLATFORM ADAPTER ARCHITECTURE
+
+Do NOT hard-code publishing logic throughout the application.
+
+Create adapters:
+
+```text
+FacebookAdapter
+InstagramAdapter
+WhatsAppAdapter
+YouTubeAdapter
+TelegramAdapter
+TwitterAdapter
+WebsiteAdapter
+```
+
+Common interface:
+
+```text
+publish()
+schedule()
+update()
+delete()
+getStatus()
+getAnalytics()
+```
+
+This allows new platforms to be added later.
+
+---
+
+# 18. ADMIN ROLES
+
+Create RBAC.
+
+Roles:
+
+### SUPER ADMIN
+
+Everything.
+
+### EDITOR
+
+Create/edit/approve/publish.
+
+### REPORTER
+
+Create research/articles.
+
+### SOCIAL MEDIA MANAGER
+
+Manage social posts.
+
+### VIDEO EDITOR
+
+Manage videos.
+
+### DESIGNER
+
+Manage graphics.
+
+### FACT CHECKER
+
+Verify stories.
+
+### ANALYST
+
+View analytics.
+
+### VIEWER
+
+Read-only.
+
+---
+
+# 19. NEWS DATABASE
+
+Design a proper relational database.
+
+Main tables:
+
+```text
+users
+roles
+permissions
+
+news_articles
+news_categories
+news_tags
+news_sources
+news_research
+fact_checks
+news_versions
+
+media_assets
+image_generations
+video_projects
+video_assets
+
+social_accounts
+social_posts
+social_post_variants
+social_publish_logs
+
+whatsapp_templates
+whatsapp_campaigns
+whatsapp_messages
+
+youtube_videos
+youtube_channels
+
+content_calendar
+scheduled_posts
+
+ai_agents
+ai_tasks
+ai_runs
+ai_prompts
+
+analytics
+article_analytics
+social_analytics
+video_analytics
+
+rss_sources
+rss_items
+
+notifications
+audit_logs
+system_settings
+```
+
+Use foreign keys and indexes correctly.
+
+---
+
+# 20. AI AGENT ORCHESTRATOR
+
+Create a central AI orchestration engine.
+
+Example:
+
+```text
+News Request
+      ↓
+Orchestrator
+      ↓
+Research Agent
+      ↓
+Fact Check Agent
+      ↓
+Writer Agent
+      ↓
+SEO Agent
+      ↓
+Visual Agent
+      ↓
+Social Agent
+      ↓
+Video Agent
+      ↓
+Editor Approval
+      ↓
+Publishing Agent
+      ↓
+Analytics Agent
+```
+
+Every agent must return structured JSON.
+
+The orchestrator should maintain:
+
+* task_id
+* agent
+* input
+* output
+* status
+* errors
+* timestamps
+* retry count
+* token/cost information
+
+---
+
+# 21. AI MODEL ABSTRACTION
+
+Do not lock the application to one AI provider.
+
+Create:
+
+```text
+AIProviderInterface
+```
+
+Implement providers such as:
+
+```text
+OpenAIProvider
+AnthropicProvider
+GeminiProvider
+LocalModelProvider
+```
+
+Admin can configure which model is used for:
+
+* Research
+* Writing
+* Translation
+* Classification
+* Image generation
+* Video scripts
+
+---
+
+# 22. HUMAN-IN-THE-LOOP
+
+This is mandatory.
+
+AI should assist journalists/editors rather than silently replacing editorial verification.
+
+Allow:
+
+* Manual editing
+* Source verification
+* Claim approval
+* Quote verification
+* Image replacement
+* Headline editing
+* Platform-specific editing
+* Publish approval
+
+Maintain an audit trail of changes.
+
+---
+
+# 23. AUTOMATION RULES
+
+Create a visual automation builder.
+
+Example:
+
+```text
+WHEN
+New RSS article detected
+
+IF
+Category = Local News
+
+THEN
+Research
+→ Fact Check
+→ Draft
+→ Generate Social Content
+→ Notify Editor
+```
+
+Another:
+
+```text
+WHEN
+Editor approves article
+
+THEN
+Publish Website
+→ Generate Facebook Post
+→ Generate Instagram Post
+→ Generate WhatsApp Message
+→ Generate YouTube Short
+→ Schedule all platforms
+```
+
+---
+
+# 24. NOTIFICATION SYSTEM
+
+Notify editors through:
+
+* Dashboard
+* Email
+* WhatsApp
+* Browser notification
+
+Notifications:
+
+* Breaking news detected
+* Fact-check required
+* Article ready
+* Approval required
+* Publishing failed
+* Video ready
+* Scheduled post published
+
+---
+
+# 25. ANALYTICS AGENT
+
+Track:
+
+Website:
+
+* Page views
+* Users
+* Time on page
+* Top articles
+
+Facebook:
+
+* Reach
+* Engagement
+* Shares
+* Comments
+
+Instagram:
+
+* Reach
+* Likes
+* Saves
+* Shares
+* Reels views
+
+YouTube:
+
+* Views
+* Watch time
+* CTR
+* Subscribers
+* Average view duration
+
+WhatsApp:
+
+* Sent
+* Delivered
+* Read where supported by API/provider
+
+Create daily/weekly/monthly reports.
+
+AI can summarize performance, but must distinguish observed analytics from its recommendations.
+
+---
+
+# 26. AI CONTENT OPTIMIZATION
+
+After publishing, analyze performance.
+
+Example:
+
+```text
+Article Performance
+↓
+Analytics Agent
+↓
+Identify patterns
+↓
+Suggest headline/content improvements
+↓
+Editor approval
+```
+
+Do NOT automatically manipulate headlines in ways that misrepresent the article.
+
+---
+
+# 27. WEBSITE CMS
+
+Build an integrated news CMS.
+
+Pages:
+
+* Home
+* Latest News
+* Breaking News
+* Categories
+* Article
+* Search
+* Video
+* Photo Gallery
+* About
+* Contact
+* Privacy Policy
+* Terms
+* Advertise
+
+Homepage sections:
+
+```text
+Breaking News
+Hero Story
+Latest News
+Trending
+Category Sections
+Video
+Shorts
+Photo Gallery
+Most Read
+```
+
+---
+
+# 28. MULTILINGUAL NEWS
+
+Initial languages:
+
+* Hindi
+* English
+
+Architecture must support:
+
+* Haryanvi
+* Punjabi
+* Marathi
+* Gujarati
+* Bengali
+* Tamil
+* Telugu
+* Other Indian languages
+
+Every article should have language metadata.
+
+Allow translation from the original article.
+
+---
+
+# 29. SEARCH
+
+Implement:
+
+* Full-text search
+* Category filters
+* Date filters
+* Author filters
+* Language filters
+* Tags
+* Trending search
+
+Optional:
+
+Use Elasticsearch/OpenSearch for large-scale search.
+
+---
+
+# 30. SECURITY
+
+Implement:
+
+* JWT/session authentication
+* RBAC
+* CSRF protection where applicable
+* Rate limiting
+* Input validation
+* SQL injection protection
+* XSS protection
+* Secure file uploads
+* API authentication
+* OAuth security
+* Encryption for credentials
+* Audit logs
+* Backup system
+
+Never store social API secrets in frontend JavaScript.
+
+---
+
+# 31. TECH STACK
+
+Preferred architecture:
+
+Frontend:
+
+* React
+* Vite
+* Tailwind CSS
+* React Router
+* Framer Motion
+* Lucide Icons
+
+Backend:
+
+Prefer:
+
+* Node.js
+* TypeScript
+* Express/NestJS
+
+Database:
+
+* MySQL or PostgreSQL
+
+Queue:
+
+* Redis
+* BullMQ
+
+AI:
+
+* Provider abstraction layer
+
+Storage:
+
+* S3-compatible object storage
+
+Realtime:
+
+* WebSockets or Socket.IO
+
+Scheduling:
+
+* Queue workers + cron
+
+Deployment:
+
+* Docker
+* Nginx
+* Linux VPS/cloud
+
+---
+
+# 32. API STRUCTURE
+
+Create REST APIs such as:
+
+```text
+/api/auth
+/api/users
+/api/news
+/api/news/research
+/api/news/fact-check
+/api/news/generate
+/api/news/publish
+
+/api/social/accounts
+/api/social/posts
+/api/social/schedule
+
+/api/facebook
+/api/instagram
+/api/whatsapp
+/api/youtube
+
+/api/media
+/api/images
+/api/videos
+
+/api/rss
+/api/trends
+
+/api/analytics
+/api/automation
+
+/api/ai/agents
+/api/ai/tasks
+```
+
+Use validation schemas and consistent API responses.
+
+---
+
+# 33. ERROR HANDLING
+
+Every automation step must support:
+
+* Timeout
+* Retry
+* Failure logging
+* Partial completion
+* Manual retry
+* Dead-letter queue
+
+Example:
+
+```text
+Instagram failed
+↓
+Facebook successful
+↓
+Website successful
+↓
+Retry Instagram
+```
+
+Do not make the entire workflow fail because one platform fails.
+
+---
+
+# 34. COST CONTROL
+
+Track AI usage.
+
+Dashboard:
+
+```text
+AI COST
+
+Research
+Writing
+Images
+Video
+Translation
+Total
+```
+
+Allow configurable:
+
+* Maximum tokens
+* Model selection
+* Daily AI budget
+* Image generation limit
+* Video generation limit
+
+---
+
+# 35. DESIGN SYSTEM
+
+Create a professional digital-newsroom UI.
+
+Style:
+
+* Modern
+* Premium
+* Fast
+* Responsive
+* Desktop-first newsroom dashboard
+* Mobile responsive
+* Dark/light mode
+
+Dashboard should feel like a professional media control room.
+
+Use:
+
+* Cards
+* Tables
+* Charts
+* Timeline
+* Status badges
+* Activity feeds
+* Content preview
+* Drag-and-drop scheduling
+
+---
+
+# 36. NEWS ARTICLE EDITOR
+
+Create a powerful editor similar to a professional CMS.
+
+Features:
+
+* Rich text
+* Markdown support
+* Image insertion
+* Video insertion
+* Embeds
+* SEO panel
+* Source panel
+* AI assistant
+* Version history
+* Autosave
+* Preview
+* Publish controls
+
+AI buttons:
+
+```text
+Improve Writing
+Rewrite
+Shorten
+Expand
+Translate
+Fact Check
+Generate Headline
+Generate SEO
+Generate Social
+Generate Video Script
+```
+
+---
+
+# 37. ONE-CLICK NEWS WORKFLOW
+
+The most important feature:
+
+Admin enters:
+
+```text
+Topic:
+"Example news topic"
+```
+
+Then click:
+
+### CREATE NEWS PACKAGE
+
+The AI automatically creates:
+
+```text
+✓ Research
+✓ Sources
+✓ Fact-check report
+✓ Article
+✓ 5 Headlines
+✓ SEO
+✓ Facebook Post
+✓ Instagram Caption
+✓ WhatsApp Message
+✓ YouTube Title
+✓ YouTube Description
+✓ Short Video Script
+✓ Thumbnail Prompt
+✓ Social Image
+✓ Hashtags
+```
+
+Then show:
+
+### REVIEW & APPROVE
+
+Editor reviews everything.
+
+Then:
+
+### PUBLISH PACKAGE
+
+The system distributes approved content.
+
+---
+
+# 38. AI NEWSROOM COMMAND CENTER
+
+Create a command box:
+
+```text
+What would you like to do?
+
+> Create a news story about today's major Haryana news
+> Find trending technology stories
+> Create a 60-second YouTube Short
+> Prepare today's social media schedule
+> Show articles waiting for fact checking
+> Generate social posts for today's published articles
+```
+
+The AI should convert natural-language commands into safe structured tasks.
+
+For actions that publish externally, require explicit confirmation unless the admin has configured a trusted automation rule.
+
+---
+
+# 39. AUDIT LOG
+
+Record:
+
+* Who created article
+* Which AI agent generated it
+* Which sources were used
+* Who edited it
+* Who approved it
+* Who published it
+* Which platforms were used
+* Publishing timestamps
+* Errors
+* Changes
+
+This is essential for newsroom accountability.
+
+---
+
+# 40. DEVELOPMENT APPROACH
+
+Build the system in phases.
+
+## PHASE 1
+
+Authentication + Admin Dashboard
+
+## PHASE 2
+
+News CMS
+
+## PHASE 3
+
+Research Agent
+
+## PHASE 4
+
+Fact Check Agent
+
+## PHASE 5
+
+AI Writer
+
+## PHASE 6
+
+SEO Agent
+
+## PHASE 7
+
+Social Media Generator
+
+## PHASE 8
+
+Facebook + Instagram integration
+
+## PHASE 9
+
+WhatsApp Business integration
+
+## PHASE 10
+
+YouTube integration
+
+## PHASE 11
+
+Image generation
+
+## PHASE 12
+
+Video generation
+
+## PHASE 13
+
+Scheduling
+
+## PHASE 14
+
+Analytics
+
+## PHASE 15
+
+Automation Builder
+
+## PHASE 16
+
+AI Newsroom Command Center
+
+## PHASE 17
+
+Production security + deployment
+
+---
+
+# 41. IMPORTANT IMPLEMENTATION RULE
+
+Do not create a fake demo application.
+
+Build real:
+
+* Database
+* Authentication
+* APIs
+* Queue system
+* AI agent orchestration
+* OAuth integrations
+* Social publishing adapters
+* Scheduling
+* Error handling
+* Analytics
+* Audit logging
+
+Use environment variables for all API keys.
+
+Create:
+
+```text
+.env.example
+README.md
+docker-compose.yml
+database/schema.sql
+database/seed.sql
+```
+
+Provide complete setup instructions.
+
+---
+
+# 42. DELIVERABLE
+
+Generate the complete project with:
+
+1. Architecture
+2. Folder structure
+3. Database schema
+4. Backend
+5. Frontend
+6. AI agent system
+7. API integrations
+8. Authentication
+9. Admin dashboard
+10. News CMS
+11. Social media manager
+12. WhatsApp manager
+13. YouTube manager
+14. Media generator
+15. Video workflow
+16. Scheduler
+17. Automation engine
+18. Analytics
+19. Audit logs
+20. Security
+21. Docker configuration
+22. Environment configuration
+23. API documentation
+24. README
+25. Testing
+
+Do not skip backend implementation.
+
+Do not use fake API responses where real integrations are required.
+
+If an external API requires credentials or account approval, create the complete integration layer and clearly document the required credentials/configuration.
+
+Start by generating the architecture and folder structure, then database schema, then backend, then frontend, then AI agents, then integrations, and finally deployment.
+
+The final result should be a scalable **AI-powered digital newsroom and multi-platform social media publishing system**, not merely a collection of AI prompts.
