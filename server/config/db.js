@@ -2,6 +2,11 @@ import mysql from 'mysql2/promise';
 import dotenv from 'dotenv';
 dotenv.config();
 
+const isCloudHost = process.env.DB_HOST && process.env.DB_HOST !== '127.0.0.1' && process.env.DB_HOST !== 'localhost';
+const ssl = (process.env.DB_SSL === 'true' || (isCloudHost && process.env.DB_SSL !== 'false')) 
+  ? { rejectUnauthorized: false } 
+  : undefined;
+
 const pool = mysql.createPool({
   host: process.env.DB_HOST || '127.0.0.1',
   port: parseInt(process.env.DB_PORT || '3306', 10),
@@ -11,7 +16,8 @@ const pool = mysql.createPool({
   waitForConnections: true,
   connectionLimit: 15,
   queueLimit: 0,
-  charset: 'utf8mb4'
+  charset: 'utf8mb4',
+  ...(ssl ? { ssl } : {})
 });
 
 export async function query(sql, params = []) {
